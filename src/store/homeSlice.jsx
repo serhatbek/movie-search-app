@@ -1,18 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  value: 0,
+  url: {},
+  genres: {},
 };
 
 export const homeSlice = createSlice({
   name: 'home',
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1;
+    getApiConfiguration: (state, action) => {
+      state.url = action.payload;
+    },
+    getGenres: (state, action) => {
+      state.genres = action.payload;
     },
   },
 });
 
-export const { increment } = homeSlice.actions;
+export const { getApiConfiguration, getGenres } = homeSlice.actions;
 export default homeSlice.reducer;

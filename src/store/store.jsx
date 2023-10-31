@@ -3,6 +3,6 @@ import homeReducer from './homeSlice';
 
 export const store = configureStore({
   reducer: {
-    homeReducer,
+    home: homeReducer,
   },
 });
