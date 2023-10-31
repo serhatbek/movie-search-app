@@ -1,4 +1,4 @@
-import React from 'react';
+import './VideoPopup.scss';
 
 const VideoPopup = () => {
   return <div>VideoPopup</div>;

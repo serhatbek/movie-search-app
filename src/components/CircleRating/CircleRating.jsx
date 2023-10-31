@@ -1,4 +1,4 @@
-import React from 'react';
+import './CircleRating.scss';
 
 const CircleRating = () => {
   return <div>CircleRating</div>;

@@ -1,4 +1,4 @@
-import React from 'react';
+import './LazyLoadImage.scss';
 
 const LazyLoadImage = () => {
   return <div>LazyLoadImage</div>;
