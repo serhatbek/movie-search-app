@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchDataFromApi } from './utils/api';
-import { getApiConfiguration } from './store/homeSlice';
 import {
   createBrowserRouter,
   RouterProvider,
   createHashRouter,
 } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchDataFromApi } from './utils/api';
+import { getApiConfiguration } from './store/homeSlice';
 
 import {
   Home,
@@ -25,6 +25,22 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: '/:mediaType/:id',
+        element: <Details />,
+      },
+      {
+        path: '/search/:query',
+        element: <SearchResult />,
+      },
+      {
+        path: '/explore/:mediaType',
+        element: <Explore />,
+      },
+      {
+        path: '*',
+        element: <PageNotFound />,
       },
     ],
   },
