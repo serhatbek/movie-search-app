@@ -3,6 +3,8 @@ import './HeroBanner.scss';
 import { useNavigate } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
 import { useSelector } from 'react-redux';
+import ImageLazyLoad from '../ImageLazyLoad/ImageLazyLoad';
+import ContentWrapper from '../ContentWrapper/ContentWrapper';
 
 const HeroBanner = () => {
   const [background, setBackground] = useState('');
@@ -11,8 +13,7 @@ const HeroBanner = () => {
   const { url } = useSelector((state) => state.home);
 
   const { data, loading } = useFetch('/movie/upcoming');
-  // console.log('upcoming 🩷🩷🩷', data);
-  console.log('bg 🩷🩷🩷', background);
+  // console.log('bg 🩷🩷🩷', background);
 
   useEffect(() => {
     const bg =
@@ -29,10 +30,18 @@ const HeroBanner = () => {
 
   return (
     <section className='hero-banner'>
-      <div className='wrapper'>
+      {!loading && (
+        <div className='backdrop-img'>
+          <ImageLazyLoad src={background} />
+        </div>
+      )}
+
+      <div className='opacity-layer'></div>
+
+      <ContentWrapper>
         <div className='hero-banner__content'>
-          <span>Welcome.</span>
-          <span>
+          <span className='hero-banner__content__title'>Welcome.</span>
+          <span className='hero-banner__content__subtitle'>
             Millions of movies, TV shows and people to discover Explore now.
           </span>
           <div className='hero-banner__search'>
@@ -46,7 +55,7 @@ const HeroBanner = () => {
             <button>Search</button>
           </div>
         </div>
-      </div>
+      </ContentWrapper>
     </section>
   );
 };

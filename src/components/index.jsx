@@ -5,7 +5,7 @@ export { default as Carousel } from './Carousel/Carousel';
 export { default as CircleRating } from './CircleRating/CircleRating';
 export { default as ContentWrapper } from './ContentWrapper/ContentWrapper';
 export { default as Genres } from './Genres/Genres';
-export { default as LazyLoadImage } from './LazyLoadImage/LazyLoadImage';
+export { default as ImageLazyLoad } from './ImageLazyLoad/ImageLazyLoad';
 export { default as MovieCard } from './MovieCard/MovieCard';
 export { default as Spinner } from './Spinner/Spinner';
 export { default as SwitchTabs } from './SwitchTabs/SwitchTabs';
