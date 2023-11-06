@@ -1,7 +1,7 @@
 import './ContentWrapper.scss';
 
-const ContentWrapper = () => {
-  return <div>ContentWrapper</div>;
+const ContentWrapper = ({ children }) => {
+  return <div className='contentWrapper'>{children}</div>;
 };
 
 export default ContentWrapper;
