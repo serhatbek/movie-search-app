@@ -1,4 +1,4 @@
-import HeroBanner from '../../components/HeroBanner/HeroBanner';
+import { HeroBanner } from '../../components';
 import './Home.scss';
 
 const Home = () => {
