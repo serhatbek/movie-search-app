@@ -8,7 +8,12 @@ import {
   BsFillArrowRightCircleFill,
 } from 'react-icons/bs';
 
-import { CircleRating, ContentWrapper, ImageLazyLoad } from '../../components';
+import {
+  CircleRating,
+  ContentWrapper,
+  Genres,
+  ImageLazyLoad,
+} from '../../components';
 import PosterFallback from '../../assets/images/no-poster.png';
 
 const Carousel = ({ data, loading }) => {
@@ -51,6 +56,7 @@ const Carousel = ({ data, loading }) => {
                   <div className='posterBlock'>
                     <ImageLazyLoad src={posterUrl} />
                     <CircleRating rating={item.vote_average.toFixed(1)} />
+                    <Genres data={item.genre_ids.slice(0, 2)} />
                   </div>
                   <div className='textBlock'>
                     <span className='title'>{item.title || item.name}</span>
