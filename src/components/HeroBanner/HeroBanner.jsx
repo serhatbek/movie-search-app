@@ -3,8 +3,7 @@ import './HeroBanner.scss';
 import { useNavigate } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
 import { useSelector } from 'react-redux';
-import ImageLazyLoad from '../ImageLazyLoad/ImageLazyLoad';
-import ContentWrapper from '../ContentWrapper/ContentWrapper';
+import { ImageLazyLoad, ContentWrapper } from '../../components';
 
 const HeroBanner = () => {
   const [background, setBackground] = useState('');
@@ -13,7 +12,6 @@ const HeroBanner = () => {
   const { url } = useSelector((state) => state.home);
 
   const { data, loading } = useFetch('/movie/upcoming');
-  // console.log('bg 🩷🩷🩷', background);
 
   useEffect(() => {
     const bg =

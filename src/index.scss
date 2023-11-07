@@ -30,6 +30,17 @@ body {
   background-color: var(--black);
 }
 
+ul,
+ol {
+  list-style-type: none;
+}
+
+a,
+button {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
