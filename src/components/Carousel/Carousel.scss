@@ -17,7 +17,8 @@
 
   .arrow {
     font-size: 30px;
-    color: black;
+    // color: black;
+    color: white;
     position: absolute;
     top: 44%;
     transform: translateY(-50%);
@@ -35,7 +36,7 @@
   .carouselLeftNav {
     left: 30px;
   }
-  .carouselRighttNav {
+  .carouselRightNav {
     right: 30px;
   }
   .loadingSkeleton {
