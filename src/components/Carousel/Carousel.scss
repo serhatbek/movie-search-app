@@ -26,6 +26,7 @@
     opacity: 0.5;
     z-index: 1;
     display: none;
+    filter: drop-shadow(2px 4px 6px black);
     @include md {
       display: block;
     }

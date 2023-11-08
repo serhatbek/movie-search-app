@@ -1,4 +1,4 @@
-import { HeroBanner, Trending } from '../../components';
+import { HeroBanner, Popular, TopRated, Trending } from '../../components';
 import './Home.scss';
 
 const Home = () => {
@@ -6,7 +6,8 @@ const Home = () => {
     <div className='home'>
       <HeroBanner />
       <Trending />
-      <div style={{ height: 1000 }}></div>
+      <Popular />
+      <TopRated />
     </div>
   );
 };

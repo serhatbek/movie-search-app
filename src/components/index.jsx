@@ -10,4 +10,7 @@ export { default as MovieCard } from './MovieCard/MovieCard';
 export { default as Spinner } from './Spinner/Spinner';
 export { default as SwitchTabs } from './SwitchTabs/SwitchTabs';
 export { default as VideoPopup } from './VideoPopup/VideoPopup';
+
 export { default as Trending } from './Trending/Trending';
+export { default as Popular } from './Popular/Popular';
+export { default as TopRated } from './TopRated/TopRated';
