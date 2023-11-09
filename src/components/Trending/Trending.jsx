@@ -1,4 +1,3 @@
-import './Trending.scss';
 import { Carousel, ContentWrapper, SwitchTabs } from '../../components';
 import { useState } from 'react';
 import useFetch from '../../hooks/useFetch';
