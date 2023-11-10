@@ -17,3 +17,4 @@ export { default as Popular } from './Popular/Popular';
 export { default as TopRated } from './TopRated/TopRated';
 export { default as DetailsBanner } from './DetailsBanner/DetailsBanner';
 export { default as Cast } from './Cast/Cast';
+export { default as VideosSection } from './VideosSection/VideosSection';
