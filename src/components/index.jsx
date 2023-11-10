@@ -19,3 +19,4 @@ export { default as DetailsBanner } from './DetailsBanner/DetailsBanner';
 export { default as Cast } from './Cast/Cast';
 export { default as VideosSection } from './VideosSection/VideosSection';
 export { default as CarouselSimilar } from './CarouselSimilar/CarouselSimilar';
+export { default as CarouselRecommendation } from './CarouselRecommendation/CarouselRecommendation';

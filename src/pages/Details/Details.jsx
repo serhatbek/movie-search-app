@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
 import './Details.scss';
 import {
+  CarouselRecommendation,
   CarouselSimilar,
   Cast,
   DetailsBanner,
@@ -21,6 +22,7 @@ const Details = () => {
       <Cast data={credits?.cast} loading={creditsLoading} />
       <VideosSection data={data} loading={loading} />
       <CarouselSimilar mediaType={mediaType} id={id} />
+      <CarouselRecommendation mediaType={mediaType} id={id} />
     </div>
   );
 };
