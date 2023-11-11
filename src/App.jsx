@@ -17,7 +17,7 @@ import {
   OutletLayout,
 } from './pages';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <OutletLayout />,
