@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { HiOutlineSearch } from 'react-icons/hi';
 import { SlMenu } from 'react-icons/sl';
 import { VscChromeClose } from 'react-icons/vsc';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import { ContentWrapper } from '../../components';
 import logo from '../../assets/images/movix-logo.svg';
@@ -18,12 +18,10 @@ const Header = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // console.log('location 🩷🩷🩷', location);
     window.scrollTo(0, 0);
   }, [location]);
 
   const controlNavbar = () => {
-    // console.log(window.scrollY);
     if (window.scrollY > 200) {
       if (window.scrollY > lastScrollY && !mobileMenu) {
         setShow('hide');
@@ -81,9 +79,9 @@ const Header = () => {
   return (
     <header className={`header ${mobileMenu ? 'mobileView' : ''} ${show}`}>
       <ContentWrapper>
-        <div className='header__logo'>
+        <Link to={'/'} className='header__logo'>
           <img src={logo} alt='' />
-        </div>
+        </Link>
 
         <nav>
           <ul className='header__menuItems'>
